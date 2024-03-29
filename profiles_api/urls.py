@@ -11,5 +11,6 @@ router.register('profile', views.UserProfileViewSet)
 urlpatterns = [
     # a standard function to convert api view class to be rendered
     path('hello-view', views.HelloApiView.as_view()),
+    path('login/', views.UserLoginApiView.as_view()),
     path('', include(router.urls))
 ]
