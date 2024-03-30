@@ -7,6 +7,8 @@ router = DefaultRouter()
 router.register('hello-viewset', views.HelloViewSet, base_name='hello-viewset')
 # if we have a queryset, we don't need a name
 router.register('profile', views.UserProfileViewSet)
+router.register('feed', views.UserProfileFeedViewSet)
+
 
 urlpatterns = [
     # a standard function to convert api view class to be rendered
