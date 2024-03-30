@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '61-g5$&plzuihnt8zo7^0!_ccc)7x*2qy_7rk&&=39@!52e&tm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get("DEBUG", 1)))
 
 ALLOWED_HOSTS = []
 
@@ -124,3 +124,6 @@ STATIC_URL = '/static/'
 
 # use this instead of django model
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+# deploy configuration
+STATIC_ROOT = 'static/'
